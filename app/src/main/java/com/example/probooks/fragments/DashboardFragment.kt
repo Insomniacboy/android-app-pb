@@ -14,7 +14,7 @@ import com.example.probooks.viewmodels.HomeViewModel
 
 class DashboardFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var dashboardViewModel: DashboardViewModel
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +24,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val root: View = inflater.inflate(R.layout.fragment_home, container, false)
+        val root: View = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
         return root
     }

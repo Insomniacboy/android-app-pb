@@ -17,6 +17,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.probooks.adapters.EventAdapter
 import com.example.probooks.databinding.ActivityMainBinding
+import com.example.probooks.models.EventItem
 import com.example.probooks.viewmodels.AccessViewModel
 import com.example.probooks.viewmodels.EventViewModel
 import kotlinx.android.synthetic.main.activity_main.*
@@ -78,6 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        Log.d("ADebugTag", "Value: " + adapter.itemsFilterList);
 
         viewModel.init(this)
         viewModel.fetchData().observe(this, Observer{

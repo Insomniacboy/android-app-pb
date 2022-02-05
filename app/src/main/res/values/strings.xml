@@ -3,6 +3,9 @@
     <string name="title_home">Доступные книги</string>
     <string name="title_dashboard">Книги на руках</string>
     <string name="title_notifications">Информация</string>
+    <string name="hyperlink">☑ Приоритет в <a href="https://probooks.space/wishlist">вишлисте</a></string>
+    <string name="partner1">Специальный партнер ЗАО \"Банк Азии\"</string>
+    <string name="partner2">Специальный партнер ОсОО \"Бейкер Тилли Бишкек\"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

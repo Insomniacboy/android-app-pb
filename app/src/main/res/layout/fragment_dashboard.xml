@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
-
-
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
-        tools:context=".MainActivity">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,40 +20,253 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_probookslogo"
                 android:scaleX="0.5"
-                android:scaleY="0.5" />
+                android:scaleY="0.5"
+                android:src="@drawable/ic_probookslogo" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Добро пожаловать в современную библиотеку ProBooks! С нами у вас есть возможность брать книги из нашей библиотеки домой. Читайте лучшие книги по саморазвитию, продажам, менеджменту, лидерству, стратегии, старту и развитию бизнеса. Становитесь лучше вместе с нами!"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="О проекте"
+                android:shadowColor="@color/main_red"
+                android:gravity="center"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity=""
+                android:text="ProBooks - это сервис современной библиотеки деловой литературы, который дает возможность читать дорогостоящие книги за небольшую плату. Вы также можете делиться своими книгами с другими, сделав пожертвование в нашу библиотеку. Мы присваиваем имя владельца к каждой пожертвованной книге, таким образом читатели вашей книги будут знать кого благодарить! Цель проекта - помогать нашим читателям становиться лучшей версией себя, сделав деловую литературу более доступной. Вместо покупки одной дорогостоящей книги, вы можете взять у нас в аренду сразу несколько книг."
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Стоимость"
+                android:shadowColor="@color/main_red"
+                android:gravity="center"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подписка на 3 месяца"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="450 сом"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="☑ Вы можете взять на дом абсолютно любую книгу из нашей библиотеки \n☑ Возможность держать книгу у себя 1 месяц \n☑ Подписка на рассылку, при поступлении новых книг"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подписка на 6 месяцев"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="800 сом"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Экономия 100 сом"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="☑ Вы можете взять на дом абсолютно любую книгу из нашей библиотеки \n☑ Возможность держать книгу у себя 1 месяц \n☑ Подписка на рассылку, при поступлении новых книг"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подписка на 12 месяцев"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1500 сом"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Экономия 300 сом"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hyperlink"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="☑ Вы можете взять на дом абсолютно любую книгу из нашей библиотеки \n☑ Возможность держать книгу у себя 1 месяц \n☑ Подписка на рассылку, при поступлении новых книг"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Партнёры"
+                android:shadowColor="@color/main_red"
+                android:gravity="center"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/partner1"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
             <ImageView
-                android:id="@+id/imageLogoView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_prokglogo" />
-
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@drawable/ic_probookslogo" />
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="Привет"
+                android:text="@string/partner2"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@drawable/ic_probookslogo" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:layout_marginStart="120dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="-140dp"/>
-
+                android:text="Контакты"
+                android:shadowColor="@color/main_red"
+                android:gravity="center"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/placeTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                android:text="Пока"
-                android:layout_marginStart="120dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"/>
+                android:text="Email: prokgclub@gmail.com\n
+Тел: 0776 884 499\n
+WhatsApp: 0776 884 499\n\n
 
+OloloErkindik, Эркиндик 64Б, 1 этаж, 16 офис.\n
+Наш офис работает ПН - ПТ 11:00 — 18:00"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
         </LinearLayout>
     </FrameLayout>
+</ScrollView>
+    </androidx.cardview.widget.CardView>
 </layout>
