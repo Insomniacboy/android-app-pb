@@ -1,0 +1,10 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+ext.kotlin_version="1.6.10"
+rootProject.name = "ProBooks"
+include ':app'
