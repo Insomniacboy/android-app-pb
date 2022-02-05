@@ -8,16 +8,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="40dp"
+    android:layout_marginTop="48dp"
+    android:orientation="vertical"
     tools:context=".fragments.HomeFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/books_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_red"
-        android:textCursorDrawable="@null"
-        app:iconifiedByDefault="false"
-        app:queryBackground="@null" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

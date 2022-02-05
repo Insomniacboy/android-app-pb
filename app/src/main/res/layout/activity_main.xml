@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +20,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/books_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red"
+        android:textCursorDrawable="@null"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null"
+        tools:ignore="MissingConstraints" />
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
