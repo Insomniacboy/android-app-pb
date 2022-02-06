@@ -25,7 +25,6 @@
             android:layout_width="100dp"
             android:layout_height="141dp"
             android:layout_marginLeft="10dp"
-            android:scaleType="centerCrop"
             android:src="#888888" />
 
         <com.google.android.material.textview.MaterialTextView

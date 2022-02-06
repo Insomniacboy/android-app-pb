@@ -6,13 +6,6 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="40dp"
-        tools:context=".MainActivity"
-        android:orientation="vertical"
-        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,6 +17,7 @@
                 android:layout_height="wrap_content"
                 android:scaleX="0.5"
                 android:scaleY="0.5"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_probookslogo" />
             <View
                 android:layout_width="match_parent"
@@ -172,9 +166,12 @@
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hyperlink"
+                android:clickable="true"
+                android:onClick="OnClick"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
@@ -213,11 +210,11 @@
             android:layout_marginEnd="10dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
             <ImageView
-                android:layout_width="wrap_content"
+                android:id="@+id/partner1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
-                android:src="@drawable/ic_probookslogo" />
+                android:layout_gravity="center"
+                android:src="#888888" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -227,11 +224,47 @@
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
             <ImageView
+                android:id="@+id/partner2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
-                android:src="@drawable/ic_probookslogo" />
+                android:layout_gravity="center"
+                android:src="#888888" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="FAQ"
+                android:shadowColor="@color/main_red"
+                android:gravity="center"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Q: Что нужно для того, чтобы взять одну из наших книг? \nA: Забронируйте книгу на сайте и заберите ее в нашем офисе. При получении книги необходимо иметь с собой удостоверение личности.\nQ: На какой срок выдается книга?\nA: Книги выдаются на 30 или 60 дней в зависимости от выбора подписки.\nQ: Желаемой книги нет на сайте? "
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/answer"
+                android:clickable="true"
+                android:onClick="OnClick"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -266,7 +299,6 @@ OloloErkindik, Эркиндик 64Б, 1 этаж, 16 офис.\n
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
         </LinearLayout>
-    </FrameLayout>
 </ScrollView>
     </androidx.cardview.widget.CardView>
 </layout>

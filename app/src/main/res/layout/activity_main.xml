@@ -23,7 +23,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/books_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="@color/main_red"
         android:textCursorDrawable="@null"
         app:iconifiedByDefault="false"
