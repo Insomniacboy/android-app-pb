@@ -6,10 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
-        android:layout_marginTop="48dp"
         tools:context=".fragments.NotificationsFragment"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2">
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

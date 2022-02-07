@@ -2,9 +2,9 @@ package com.example.probooks.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.probooks.BR
@@ -14,10 +14,10 @@ import com.example.probooks.models.EventItem
 import com.squareup.picasso.Picasso
 import java.util.*
 
-class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdapter.ViewHolder>(),
-    Filterable {
+class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdapter.ViewHolder>(){
 
     private var items = mutableListOf<EventItem>()
+    private var itemsFilterList = mutableListOf<EventItem>()
     fun setListData(data: MutableList<EventItem>) {
         items = data
         notifyDataSetChanged()
@@ -29,6 +29,7 @@ class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdap
         val binding = EventItemBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
+
 
     override fun getItemCount(): Int {
         return items.size
@@ -54,34 +55,11 @@ class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdap
         }
     }
 
-    var itemsFilterList=items
-
-    override fun getFilter(): Filter {
-        return object : Filter() {
-            override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val charSearch = constraint.toString()
-                if (charSearch.isEmpty()) {
-                    itemsFilterList = items
-                } else {
-                    val resultList = mutableListOf<EventItem>()
-                    for (row in items) {
-                        if (items.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))
-                        ) {
-                            resultList.add(row)
-                        }
-                    }
-                    itemsFilterList = resultList
-                }
-                val filterResults = FilterResults()
-                filterResults.values =itemsFilterList
-                return filterResults
-            }
-
-            @Suppress("UNCHECKED_CAST")
-            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                    itemsFilterList = results?.values as MutableList<EventItem>
-                    notifyDataSetChanged()
-            }
-        }
+    fun setFilter(newList: MutableList<EventItem>) {
+  //      items = newList
+        items = mutableListOf()
+        items.addAll(newList)
+        notifyDataSetChanged()
     }
+
 }

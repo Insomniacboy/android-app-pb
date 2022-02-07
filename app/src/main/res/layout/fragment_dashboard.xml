@@ -22,7 +22,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,13 +34,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="О проекте"
-                android:shadowColor="@color/main_red"
+                android:shadowColor="#5883C3"
                 android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -49,7 +49,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -63,13 +63,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="Стоимость"
-                android:shadowColor="@color/main_red"
+                android:shadowColor="#5883C3"
                 android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -78,7 +78,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -185,13 +185,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="Партнёры"
-                android:shadowColor="@color/main_red"
+                android:shadowColor="#5883C3"
                 android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -200,7 +200,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -214,6 +214,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="partner1"
                 android:src="#888888" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -228,17 +230,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="partner2"
                 android:src="#888888" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="FAQ"
-                android:shadowColor="@color/main_red"
+                android:shadowColor="#5883C3"
                 android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -247,7 +251,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -268,13 +272,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="Контакты"
-                android:shadowColor="@color/main_red"
+                android:shadowColor="#5883C3"
                 android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -283,7 +287,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

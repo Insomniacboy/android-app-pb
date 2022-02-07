@@ -23,7 +23,8 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_width="100dp"
-                android:layout_height="141dp"
+                android:layout_height="150dp"
+                android:paddingTop="10dp"
                 android:src="#888888" />
 
             <com.google.android.material.textview.MaterialTextView

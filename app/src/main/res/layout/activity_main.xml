@@ -20,16 +20,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/books_search"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@color/main_red"
-        android:textCursorDrawable="@null"
-        app:iconifiedByDefault="false"
-        app:queryBackground="@null"
-        tools:ignore="MissingConstraints" />
-
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
