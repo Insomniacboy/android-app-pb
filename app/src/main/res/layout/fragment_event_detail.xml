@@ -4,7 +4,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="40dp">
+        android:layout_marginBottom="55dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -51,7 +51,6 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:text="Бронировать"
             android:gravity="center"
-                android:onClick="redirectToOrder"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="12dp" />

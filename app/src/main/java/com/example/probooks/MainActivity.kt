@@ -5,11 +5,12 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
@@ -40,7 +41,6 @@ class MainActivity : AppCompatActivity() {
     private val adapter1: EventAdapter ?=null
     private val eventItems: MutableList<EventItem> = mutableListOf<EventItem>()
 
-
     fun OnClick(view: View){
         val url = "https://probooks.space/wishlist/"
         val intent = Intent(Intent.ACTION_VIEW)
@@ -60,17 +60,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun redirectToOrder(view: View){
-        try {
-            val pm: PackageManager = view.getContext().getPackageManager()
-            pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)
-            val url = "https://api.whatsapp.com/send?phone=" + "996504368000" + "&text=" + "Здравствуйте! Я хочу забронировать книгу: " + "\"" + titleTextView.text + "\"" + " от автора: " + placeTextView.text;
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        } catch (e: PackageManager.NameNotFoundException)
-        {
-            val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "+996504368000"));
+    fun MailRed(view: View){
+        val intent = Intent(Intent.ACTION_SENDTO)
+        intent.data = Uri.parse("mailto:prokgclub@gmail.com") // only email apps should handle this
+        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
     }
@@ -80,6 +73,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
+
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

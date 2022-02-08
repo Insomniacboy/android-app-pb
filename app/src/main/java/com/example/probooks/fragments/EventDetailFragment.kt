@@ -1,22 +1,21 @@
 package com.example.probooks.fragments
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import androidx.fragment.app.FragmentManager
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.probooks.MainActivity
-import com.example.probooks.R
 import com.example.probooks.databinding.FragmentEventDetailBinding
 import com.example.probooks.viewmodels.EventViewModel
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_event_detail.*
 import java.util.*
 
 class EventDetailFragment : Fragment() {
@@ -26,7 +25,7 @@ class EventDetailFragment : Fragment() {
 
     public override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentEventDetailBinding.inflate(inflater, container, false)
 
@@ -35,7 +34,24 @@ class EventDetailFragment : Fragment() {
 
         val args = EventDetailFragmentArgs.fromBundle(requireArguments())
         val item = args.eventItem
-
+        val btn = binding.orderView
+        btn.setOnClickListener {
+            try {
+                val pm: PackageManager = btn.getContext().getPackageManager()
+                val title2 = titleTextView.text
+                val author = placeTextView.text
+                pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)
+                val url =
+                    "https://api.whatsapp.com/send?phone=996504368000&text=Здравствуйте! Я хочу забронировать книгу: \"$title2\" от автора: $author";
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            } catch (e: PackageManager.NameNotFoundException)
+            {
+                val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+996504368000"));
+                startActivity(intent)
+            }
+        }
 
         binding.titleTextView.text=item!!.title
         binding.placeTextView.text=item.author
@@ -50,6 +66,5 @@ class EventDetailFragment : Fragment() {
 
         return binding.root
     }
-
 
 }

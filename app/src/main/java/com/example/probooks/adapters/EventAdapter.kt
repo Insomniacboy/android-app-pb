@@ -1,10 +1,7 @@
 package com.example.probooks.adapters
 
 import android.content.Context
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.ViewGroup
+import android.view.*
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.probooks.BR
@@ -54,6 +51,8 @@ class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdap
             }
         }
     }
+
+
 
     fun setFilter(newList: MutableList<EventItem>) {
   //      items = newList
