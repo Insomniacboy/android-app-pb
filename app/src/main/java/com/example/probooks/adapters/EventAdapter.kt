@@ -2,6 +2,8 @@ package com.example.probooks.adapters
 
 import android.content.Context
 import android.view.*
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.probooks.BR
@@ -14,7 +16,6 @@ import java.util.*
 class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdapter.ViewHolder>(){
 
     private var items = mutableListOf<EventItem>()
-    private var itemsFilterList = mutableListOf<EventItem>()
     fun setListData(data: MutableList<EventItem>) {
         items = data
         notifyDataSetChanged()
@@ -55,7 +56,7 @@ class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdap
 
 
     fun setFilter(newList: MutableList<EventItem>) {
-  //      items = newList
+  //     items = newList
         items = mutableListOf()
         items.addAll(newList)
         notifyDataSetChanged()

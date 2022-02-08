@@ -33,7 +33,7 @@
     <fragment
         android:id="@+id/eventDetailFragment"
         android:name="com.example.probooks.fragments.EventDetailFragment"
-        android:label="Описание" >
+        android:label="Описание">
         <argument
             android:name="eventItem"
             app:argType="com.example.probooks.models.EventItem"

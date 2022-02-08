@@ -7,30 +7,34 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import com.example.probooks.R
 import com.example.probooks.databinding.FragmentEventDetailBinding
 import com.example.probooks.viewmodels.EventViewModel
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import java.util.*
+
 
 class EventDetailFragment : Fragment() {
     private lateinit var binding: FragmentEventDetailBinding
     private val viewModel by lazy { ViewModelProvider(this).get(EventViewModel::class.java)}
 
 
-    public override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentEventDetailBinding.inflate(inflater, container, false)
 
         binding.progressLayout.visibility=View.VISIBLE
-
 
         val args = EventDetailFragmentArgs.fromBundle(requireArguments())
         val item = args.eventItem
@@ -53,6 +57,7 @@ class EventDetailFragment : Fragment() {
             }
         }
 
+
         binding.titleTextView.text=item!!.title
         binding.placeTextView.text=item.author
         Picasso.get().load(item.image).into(binding.imageView)
@@ -66,5 +71,7 @@ class EventDetailFragment : Fragment() {
 
         return binding.root
     }
+
+
 
 }
