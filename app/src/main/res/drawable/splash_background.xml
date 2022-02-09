@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/gradient"/>
+
+    <item android:drawable="@drawable/startup_white_logo"
+        android:left="@dimen/activity_vertical_margin"
+        android:right="@dimen/activity_vertical_margin"
+        android:top="@dimen/activity_horizontal_margin"
+        android:bottom="@dimen/activity_horizontal_margin"
+        android:width="200dp"
+        android:height="200dp"
+        android:gravity="center"/>
+
+</layer-list>
