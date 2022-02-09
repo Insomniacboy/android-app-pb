@@ -50,6 +50,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun ProKG(view: View){
+        val url = "http://prokg.org/ru"
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
+    }
+
     fun MailRed(view: View){
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:prokgclub@gmail.com") // only email apps should handle this

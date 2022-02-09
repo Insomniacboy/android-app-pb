@@ -12,88 +12,90 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_info">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
+                android:scaleX="0.75"
+                android:scaleY="0.75"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_probookslogo" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#5883C3"/>
+             </LinearLayout>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Добро пожаловать в современную библиотеку ProBooks!\n\n С нами у вас есть возможность брать книги из нашей библиотеки домой.\n\n Читайте лучшие книги по саморазвитию, продажам, менеджменту, лидерству, стратегии, старту и развитию бизнеса.\n Становитесь лучше вместе с нами!"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Добро пожаловать в современную библиотеку ProBooks!"
                 android:gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_reverse_info"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="О проекте"
+                android:textColor="@color/white"
                 android:shadowColor="#5883C3"
-                android:gravity="center"
+                android:gravity="left"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
+
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:gravity=""
+                android:gravity="left"
                 android:text="ProBooks - это сервис современной библиотеки деловой литературы, который дает возможность читать дорогостоящие книги за небольшую плату.\n\nЦель проекта - помогать нашим читателям становиться лучшей версией себя, сделав деловую литературу более доступной. Вместо покупки одной дорогостоящей книги, вы можете взять у нас в аренду сразу несколько книг.\n\nВы также можете делиться своими книгами с другими, сделав пожертвование в нашу библиотеку. Мы присваиваем имя владельца к каждой пожертвованной книге, таким образом читатели вашей книги будут знать кого благодарить!"
+                android:textColor="@color/white"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
+            </LinearLayout>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:ellipsize="end"
                 android:text="Стоимость"
                 android:shadowColor="#5883C3"
-                android:gravity="center"
+                android:gravity="left"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Вы можете выбрать один из 3-х видов подписки. Минимальный срок подписки 3 месяца"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Подписка на 3 месяца"
                 android:textStyle="bold"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
@@ -101,20 +103,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="450 сом"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Подписка на 6 месяцев"
                 android:textStyle="bold"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
@@ -122,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="800 сом"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
@@ -130,20 +128,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Экономия 100 сом"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Подписка на 12 месяцев"
                 android:textStyle="bold"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
@@ -151,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1500 сом"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
@@ -159,26 +153,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Экономия 300 сом"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="• Вы можете взять на дом абсолютно любую книгу из нашей библиотеки \n• Возможность держать книгу у себя 1 месяц \n• Подписка на рассылку, при поступлении новых книг"
+                android:paddingBottom="10dp"
+                android:text="Для оформления подписки необходимо подойти в офис"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
-            <com.google.android.material.textview.MaterialTextView
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_info"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:text="FAQ"
+            android:textColor="@color/white"
+            android:shadowColor="#5883C3"
+            android:gravity="left"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q: Что нужно для того, чтобы взять одну из наших книг? \nA: Забронируйте книгу на сайте и заберите ее в нашем офисе. При получении книги необходимо иметь с собой удостоверение личности.\nQ: На какой срок выдается книга?\nA: Книги выдаются на 30 или 60 дней в зависимости от выбора подписки.\nQ: Желаемой книги нет на сайте? "
+            android:layout_gravity="left"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/answer"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:onClick="OnClick"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+    </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+                android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
@@ -189,10 +220,6 @@
                 android:shadowDy="1"
                 android:shadowRadius="2"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -224,66 +251,34 @@
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:onClick="partner2"
-                android:src="#888888" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
+                android:src="#888888"
+                android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_reverse_info"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:text="FAQ"
-                android:shadowColor="#5883C3"
-                android:gravity="center"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="2"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Q: Что нужно для того, чтобы взять одну из наших книг? \nA: Забронируйте книгу на сайте и заберите ее в нашем офисе. При получении книги необходимо иметь с собой удостоверение личности.\nQ: На какой срок выдается книга?\nA: Книги выдаются на 30 или 60 дней в зависимости от выбора подписки.\nQ: Желаемой книги нет на сайте? "
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/answer"
-                android:clickable="true"
-                android:onClick="OnClick"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
                 android:text="Контакты"
+                android:textColor="@color/white"
                 android:shadowColor="#5883C3"
-                android:gravity="center"
+                android:gravity="left"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#5883C3"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/mailhyperlink"
+                android:textColor="@color/white"
                 android:clickable="true"
                 android:onClick="MailRed"
                 android:gravity="center"
@@ -294,6 +289,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Тел: +996 504 368 000\n
 WhatsApp: +996 504 368 000\n
 Бизнес-Центр 79, 2 этаж, 201 офис ул. Исанова 79\n
@@ -302,7 +298,16 @@ WhatsApp: +996 504 368 000\n
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
-
+    </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="ProKG"
+                android:src="@drawable/ic_prokglogo"/>
         </LinearLayout>
 </ScrollView>
     </androidx.cardview.widget.CardView>
