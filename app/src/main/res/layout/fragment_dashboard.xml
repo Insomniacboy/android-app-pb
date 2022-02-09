@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="55dp">
+
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="55dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -310,5 +308,4 @@ WhatsApp: +996 504 368 000\n
                 android:src="@drawable/ic_prokglogo"/>
         </LinearLayout>
 </ScrollView>
-    </androidx.cardview.widget.CardView>
 </layout>

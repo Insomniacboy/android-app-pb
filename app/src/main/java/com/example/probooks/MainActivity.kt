@@ -15,6 +15,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.probooks.databinding.ActivityMainBinding
+import com.example.probooks.fragments.AccessEventDetailFragment
+import com.example.probooks.fragments.EventDetailFragment
 import com.example.probooks.viewmodels.AccessViewModel
 import com.example.probooks.viewmodels.EventViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -92,15 +94,16 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
-
+        val myFragment = supportFragmentManager.findFragmentById(R.id.eventDetailFragment)
+        val myAccessFragment = supportFragmentManager.findFragmentById(R.id.accessEventDetailFragment)
         nav_view.setOnItemReselectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    navController.popBackStack()
-                    true
+                        onSupportNavigateUp()
+                        true
                 }
                 R.id.navigation_notifications -> {
-                        navController.popBackStack()
+                        onSupportNavigateUp()
                         true
                 }
                 else -> false
