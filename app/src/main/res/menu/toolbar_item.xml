@@ -5,7 +5,8 @@
     <item
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
-        app:showAsAction="collapseActionView|ifRoom"
+        app:showAsAction="always|collapseActionView"
         android:title="Найти книгу для души"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        <!--app:showAsAction="collapseActionView|ifRoom"  -->
 </menu>

@@ -1,9 +1,11 @@
 package com.example.probooks.fragments
 
 import android.R
+import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat.getSystemService
@@ -15,6 +17,8 @@ import com.example.probooks.adapters.EventAdapter
 import com.example.probooks.databinding.FragmentHomeBinding
 import com.example.probooks.models.EventItem
 import com.example.probooks.viewmodels.EventViewModel
+import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 
 
 class HomeFragment : Fragment() {
@@ -23,6 +27,7 @@ class HomeFragment : Fragment() {
     private val viewModel by lazy {ViewModelProvider(this).get(EventViewModel::class.java)}
     private lateinit var adapter: EventAdapter
     private val eventItems: MutableList<EventItem> = mutableListOf()
+    private val newList: MutableList<EventItem> = mutableListOf()
     // This property is only valid between onCreateView and
     // onDestroyView.
     override fun onCreateView(
@@ -40,6 +45,7 @@ class HomeFragment : Fragment() {
         //in fragment need set owner viewLifecycle Owner :::important
         viewModel.fetchData().observe(viewLifecycleOwner, Observer {
             adapter.setListData(it)
+            eventItems.addAll(it)
             binding.progressBar.visibility = View.GONE
         })
 
@@ -48,40 +54,44 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater){
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(com.example.probooks.R.menu.toolbar_item, menu)
-        val searchViewItem = menu!!.findItem(com.example.probooks.R.id.action_search)
-        // Get the search view and set the searchable configuration
-        val searchManager = activity?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        val searchView = searchViewItem.actionView as SearchView
-        adapter= EventAdapter(requireActivity())
-        searchView.queryHint = "Что бы почитать..."
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(requireActivity().componentName))
-        searchView.setIconifiedByDefault(false)  //Do not iconfy the widget; expand it by default
+        val searchViewItem = menu.findItem(com.example.probooks.R.id.action_search)
 
-        val queryTextListener: SearchView.OnQueryTextListener =
-            object : SearchView.OnQueryTextListener {
-                override fun onQueryTextSubmit(s: String): Boolean {
+        if (searchViewItem != null) {
+
+            val searchView = searchViewItem.actionView as SearchView    
+            searchView.queryHint = "Что бы почитать..."
+            searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
                     return false
                 }
 
-                override fun onQueryTextChange(newText: String): Boolean {
-                    val newText = newText.lowercase()
-                    val newList: MutableList<EventItem> = mutableListOf()
-                    for (item: EventItem in eventItems) {
-                        val title: String = item.title.lowercase()
-                        val author: String  = item.author.lowercase()
-
-                        // you can specify as many conditions as you like
-                        if (title.contains(newText) or author.contains(newText)) {
-                            newList.add(item)
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    if (newText!!.isNotEmpty()) {
+                        newList.clear()
+                        val search = newText.lowercase(Locale.getDefault())
+                        eventItems.forEach {
+                            // you can specify as many conditions as you like
+                            if (it.title.lowercase(Locale.getDefault()).contains(search) or it.author.lowercase(Locale.getDefault()).contains(search)) {
+                                newList.add(it)
+                            }
                         }
+                    } else {
+                        newList.clear()
+                        newList.addAll(eventItems)
                     }
+                    adapter.setListData(newList)
+                    Log.d("FilterList", newList.toString())
                     // create method in adapter
-                    adapter.setFilter(newList)
                     return true
                 }
-            }
-        searchView.setOnQueryTextListener(queryTextListener)
+            })
+        }
+        return super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
     }
 }

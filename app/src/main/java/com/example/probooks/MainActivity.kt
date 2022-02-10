@@ -94,8 +94,7 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
-        val myFragment = supportFragmentManager.findFragmentById(R.id.eventDetailFragment)
-        val myAccessFragment = supportFragmentManager.findFragmentById(R.id.accessEventDetailFragment)
+
         nav_view.setOnItemReselectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {

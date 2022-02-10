@@ -1,6 +1,7 @@
 package com.example.probooks.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.*
 import android.widget.Filter
 import android.widget.Filterable
