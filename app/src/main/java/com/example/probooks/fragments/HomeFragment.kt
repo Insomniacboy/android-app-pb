@@ -68,8 +68,8 @@ class HomeFragment : Fragment() {
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
+                    newList.clear()
                     if (newText!!.isNotEmpty()) {
-                        newList.clear()
                         val search = newText.lowercase(Locale.getDefault())
                         eventItems.forEach {
                             // you can specify as many conditions as you like
@@ -78,7 +78,6 @@ class HomeFragment : Fragment() {
                             }
                         }
                     } else {
-                        newList.clear()
                         newList.addAll(eventItems)
                     }
                     adapter.setListData(newList)
