@@ -37,15 +37,19 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.progressBar.visibility = View.VISIBLE
+        binding.error.visibility=View.GONE
         binding.recyclerView.layoutManager=LinearLayoutManager(requireActivity())
         adapter= EventAdapter(requireActivity())
         binding.recyclerView.adapter=adapter
-
+        eventItems.clear()
 
         //in fragment need set owner viewLifecycle Owner :::important
         viewModel.fetchData().observe(viewLifecycleOwner, Observer {
             adapter.setListData(it)
             eventItems.addAll(it)
+            if (eventItems.isEmpty() ) {
+                binding.error.visibility=View.VISIBLE
+            }
             binding.progressBar.visibility = View.GONE
         })
 
@@ -74,13 +78,15 @@ class HomeFragment : Fragment() {
                         eventItems.forEach {
                             // you can specify as many conditions as you like
                             if (it.title.lowercase(Locale.getDefault()).contains(search) or it.author.lowercase(Locale.getDefault()).contains(search)) {
-                                newList.add(it)
+                                if (!newList.contains(it)) {
+                                    newList.add(it)
+                                }
                             }
                         }
+                        adapter.setListData(newList)
                     } else {
-                        newList.addAll(eventItems)
+                        adapter.setListData(eventItems)
                     }
-                    adapter.setListData(newList)
                     Log.d("FilterList", newList.toString())
                     // create method in adapter
                     return true

@@ -54,13 +54,4 @@ class EventAdapter(private val context: Context): RecyclerView.Adapter<EventAdap
         }
     }
 
-
-
-    fun setFilter(newList: MutableList<EventItem>) {
-  //     items = newList
-        items = mutableListOf()
-        items.addAll(newList)
-        notifyDataSetChanged()
-    }
-
 }

@@ -31,15 +31,19 @@ class NotificationsFragment : Fragment() {
     ): View? {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         binding.progressBar.visibility = View.VISIBLE
-
+        binding.error.visibility=View.GONE
         binding.recyclerView.layoutManager= LinearLayoutManager(requireActivity())
         adapter= AccessAdapter(requireActivity())
         binding.recyclerView.adapter=adapter
+        accessItems.clear()
 
         //in fragment need set owner viewLifecycle Owner :::important
         viewModel.fetchAccessData().observe(viewLifecycleOwner, Observer {
             adapter.setListData(it)
             accessItems.addAll(it)
+            if (accessItems.isEmpty() ) {
+                binding.error.visibility=View.VISIBLE
+            }
             binding.progressBar.visibility = View.GONE
         })
         setHasOptionsMenu(true)
@@ -60,21 +64,21 @@ class NotificationsFragment : Fragment() {
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
+                    newList.clear()
                     if (newText!!.isNotEmpty()) {
-                        newList.clear()
                         val search = newText.lowercase(Locale.getDefault())
                         accessItems.forEach {
                             // you can specify as many conditions as you like
-                            if (it.accesstitle.lowercase(Locale.getDefault()).contains(search) or it.accessauthor.lowercase(
-                                    Locale.getDefault()).contains(search)) {
-                                newList.add(it)
+                            if (it.accesstitle.lowercase(Locale.getDefault()).contains(search) or it.accessauthor.lowercase(Locale.getDefault()).contains(search)) {
+                                if (!newList.contains(it)) {
+                                    newList.add(it)
+                                }
                             }
                         }
+                        adapter.setListData(newList)
                     } else {
-                        newList.clear()
-                        newList.addAll(accessItems)
+                        adapter.setListData(accessItems)
                     }
-                    adapter.setListData(newList)
                     // create method in adapter
                     return true
                 }
