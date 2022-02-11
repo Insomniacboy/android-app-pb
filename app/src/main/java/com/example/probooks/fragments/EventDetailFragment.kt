@@ -41,7 +41,7 @@ class EventDetailFragment : Fragment() {
         val btn = binding.orderView
         btn.setOnClickListener {
             try {
-                val pm: PackageManager = btn.getContext().getPackageManager()
+                val pm: PackageManager = btn.context.packageManager
                 val title2 = titleTextView.text
                 val author = placeTextView.text
                 pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)

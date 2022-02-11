@@ -267,7 +267,7 @@
                 android:text="Контакты"
                 android:textColor="@color/white"
                 android:shadowColor="#5883C3"
-                android:gravity="left"
+                android:gravity="center"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
