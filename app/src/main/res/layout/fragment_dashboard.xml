@@ -306,6 +306,19 @@ WhatsApp: +996 504 368 000\n
                 android:clickable="true"
                 android:onClick="ProKG"
                 android:src="@drawable/ic_prokglogo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Developer:\nAtabekov Temirbek"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="5dp"
+                android:text="Designer:\nMirlanova Uulzhan"/>
         </LinearLayout>
 </ScrollView>
 </layout>
