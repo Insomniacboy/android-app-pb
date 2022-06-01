@@ -4,9 +4,32 @@
     <string name="title_dashboard">Книги на руках</string>
     <string name="title_notifications">Информация</string>
     <string name="mailhyperlink">Email: <a href="mailto:prokgclub@gmail.com">prokgclub@gmail.com</a></string>
-    <string name="partner1">Специальный партнер ЗАО \"Банк Азии\"</string>
-    <string name="partner2">Специальный партнер ОсОО \"Бейкер Тилли Бишкек\"</string>
+    <!-- <string name="partner1">Специальный партнер ЗАО \"Банк Азии\"</string>
+    <string name="partner2">Специальный партнер ОсОО \"Бейкер Тилли Бишкек\"</string> -->
     <string name="answer">A: Напишите <a href="https://probooks.space/wishlist/">здесь</a> название книги, мы приобретем ее для библиотеки и сообщим вам. Закупаем только бизнес литературу на русском языке</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="price_opt2_adv">Экономия 100 сом</string>
+    <string name="faq_num1">Q: Что нужно для того, чтобы взять одну из наших книг? \nA: Забронируйте книгу в приложении и заберите ее в нашем офисе. При получении книги необходимо иметь с собой удостоверение личности.\nQ: На какой срок выдается книга?\nA: Книги выдаются на 30 или 60 дней в зависимости от выбора подписки.\nQ: Желаемой книги нет на сайте? </string>
+    <string name="faq_num2">A: Напишите <a href="https://probooks.space/wishlist/">здесь</a> название книги, мы приобретем ее для библиотеки и сообщим вам. Закупаем только бизнес литературу на русском языке</string>
+    <string name="price_choose">Вы можете выбрать один из 3-х видов подписки. Минимальный срок подписки 3 месяца</string>
+    <string name="faq_title">FAQ</string>
+    <string name="mail_hyperlink">Email: <a href="mailto:prokgclub@gmail.com">prokgclub@gmail.com</a></string>
+    <string name="price_title">Стоимость</string>
+    <string name="price_opt3">1500 сом</string>
+    <string name="price_opt2">800 сом</string>
+    <string name="price_opt3_title">Подписка на 12 месяцев</string>
+    <string name="price_opt1">450 сом</string>
+    <string name="partner2">Специальный партнер ОсОО \"Бейкер Тилли Бишкек\"</string>
+    <string name="partner1">Специальный партнер ЗАО \"Банк Азии\"</string>
+    <string name="contacts_title">Контакты</string>
+    <string name="price_req">Для оформления подписки необходимо подойти в офис</string>
+    <string name="price_opt2_title">Подписка на 6 месяцев</string>
+    <string name="desc_title">О проекте</string>
+    <string name="welcome">Добро пожаловать в современную библиотеку ProBooks!</string>
+    <string name="price_opt1_title">Подписка на 3 месяца</string>
+    <string name="price_opt3_adv">Экономия 300 сом</string>
+    <string name="contacts">Тел: +996 700 993 567\nWhatsApp: +996 700 993 567\nБизнес-Центр 79, 2 этаж, 201\n офис ул. Исанова 79\nНаш офис работает ПН - ПТ 11:00 — 18:00</string>
+    <string name="desc">ProBooks - это сервис современной библиотеки деловой литературы, который дает возможность читать дорогостоящие книги за небольшую плату.\n\nЦель проекта - помогать нашим читателям становиться лучшей версией себя, сделав деловую литературу более доступной. Вместо покупки одной дорогостоящей книги, вы можете взять у нас в аренду сразу несколько книг.\n\nВы также можете делиться своими книгами с другими, сделав пожертвование в нашу библиотеку. Мы присваиваем имя владельца к каждой пожертвованной книге, таким образом читатели вашей книги будут знать кого благодарить!</string>
+    <string name="partners_title">Стоимость</string>
+
 </resources>

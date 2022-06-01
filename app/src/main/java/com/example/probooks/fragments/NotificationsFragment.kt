@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.probooks.R
 import com.example.probooks.adapters.AccessAdapter
 import com.example.probooks.databinding.FragmentNotificationsBinding
 import com.example.probooks.models.AccessItem
 import com.example.probooks.models.EventItem
 import com.example.probooks.viewmodels.AccessViewModel
+import java.net.URL
 import java.util.*
 
 class NotificationsFragment : Fragment() {
@@ -51,8 +53,8 @@ class NotificationsFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(com.example.probooks.R.menu.toolbar_item, menu)
-        val searchViewItem = menu.findItem(com.example.probooks.R.id.action_search)
+        inflater.inflate(R.menu.toolbar_item, menu)
+        val searchViewItem = menu.findItem(R.id.action_search)
 
         if (searchViewItem != null) {
 

@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.ActivityNavigator
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -17,14 +19,18 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.probooks.databinding.ActivityMainBinding
 import com.example.probooks.fragments.AccessEventDetailFragment
 import com.example.probooks.fragments.EventDetailFragment
+import com.example.probooks.repository.Response
 import com.example.probooks.viewmodels.AccessViewModel
 import com.example.probooks.viewmodels.EventViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.net.URL
 import java.util.*
+import java.util.concurrent.Executors
 
 
 class MainActivity : AppCompatActivity() {
@@ -118,6 +124,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("fetchAccessData", "$it")
         })
     }
+
     override fun onSupportNavigateUp(): Boolean {
         //Handle the toolbar back button here.
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -129,5 +136,8 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onSupportNavigateUp()
     }
-
+    override fun finish() {
+        super.finish()
+        ActivityNavigator.applyPopAnimationsToPendingTransition(this)
+    }
 }
