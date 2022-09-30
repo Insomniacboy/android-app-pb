@@ -71,5 +71,8 @@ data class Response(
 	val desc: String? = null,
 
 	@field:SerializedName("partners_title")
-	val partnersTitle: String? = null
+	val partnersTitle: String? = null,
+
+	@field:SerializedName("whatsapp_number")
+	val whatsapp_number: String? = null
 )

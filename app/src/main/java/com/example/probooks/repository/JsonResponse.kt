@@ -15,6 +15,6 @@ class StringAdapter(val context: Context) {
         val post: Response = gson.fromJson(response, Response::class.java)
         val mystring: String = context.getResources().getString(R.string.app_name)
         print(mystring)
-        print(post.partner1)
+        print(post.whatsapp_number)
     }
 }
